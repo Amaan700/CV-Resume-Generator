@@ -1,0 +1,47 @@
+*{
+    margin:0;
+    padding:0;
+}
+h1{
+    font-family:cursive;
+}
+#left{
+    padding-left: calc(var(--bs-gutter-x) * 4.5);
+}
+#right{
+    padding-right: calc(var(--bs-gutter-x) * 4.5);
+}
+
+#im{
+    height: 220px;
+    width: 214px;
+    border:rgb(77, 162, 184) 3px solid;
+    border-radius: 124px;
+    margin-left: 79px;
+    margin-top: 72px;
+}
+#left-group{
+    background: rgb(218 11 107);
+    width: 384px;
+    height: auto;
+    margin-left: 44px;
+    margin-top: 69px;
+}
+.details{
+    font-size: 20px;
+    color: white;
+}
+.head3{
+    background: rgb(218 11 107);
+
+}
+.card{
+    margin-right: 10px;
+}
+#cv-template{
+    margin-top:5px;
+    display: none;
+}
+#H{
+    font-family:'Courier New', Courier, monospace;
+}

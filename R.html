@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="r.css">
+</head>
+
+<body>
+    <div class="Container" id="cv-form">
+        <h1 class="text-center my-2">Resume Generator</h1>
+        <p class="text-center">By Md Amaan Ahmed.</p>
+        <div class="row">
+            <div class="col-md-6" id="left">
+                <h3>Personal Information</h3>
+                <div class="form-group">
+                    <label for="nameField">Your name</label>
+                    <input type="text" id="nameField" placeholder="Name" class="form-control" />
+
+                </div>
+                <div class="form-group mt-2">
+                    <label for="phoneField">Phone No.</label>
+                    <input type="text" id="phoneField" placeholder="enter your phone no here." class="form-control" />
+
+                </div>
+                <div class="form-group mt-2">
+                    <label for="addressField">Address.</label>
+                    <textarea id="addressField" placeholder="enter your Address here." class="form-control"></textarea>
+
+                </div>
+                <div class="form-group mt-3">
+                    <label for="">Select your profile picture</label>
+                    <input id="imgField" type="file"class="form-control">
+                </div>
+                <p class="text-secondary my-3">Important Links</p>
+                <div class="form-group mt-2">
+                    <label for="llField">Linkedin</label>
+                    <input type="text" id="llField" placeholder="link here" class="form-control" />
+
+                </div>
+                <div class="form-group mt-2">
+                    <label for="githubField">Github</label>
+                    <input type="text" id="github Field" placeholder="link here" class="form-control" />
+
+                </div>
+            </div>
+            <div class="col-md-6" id="right">
+                <h3>Technical Informations</h3>
+                <div class="form-group" id="aqd">
+                    <label for="nameField">Academic Qualifications</label>
+                    <textarea id="AcadField" placeholder="enter here" class="form-control aqfield" ></textarea>
+                    <div class="container text-center mt-2"id="aq">
+                        <button onclick="addnewaq()" class="btn btn-dark btn-sm">Add</button>
+                    </div>
+                </div>
+                <div class="form-group" id="tsd">
+                    <label for="nameField">Technical Skills</label>
+                    <textarea rows="3" id="TechField" placeholder="enter here" class="form-control tsfield" ></textarea>
+                    <div class="container text-center mt-2" id="ts">
+                        <button onclick="addnewts()" class="btn btn-dark btn-sm">Add</button>
+                    </div>
+                </div>
+                <div class="form-group" id="ind">
+                    <label for="nameField">Internships</label>
+                    <textarea rows="4" id="InternField" placeholder="enter here" class="form-control infield" ></textarea>
+                    <div class="container text-center mt-2" id="in">
+                        <button onclick="addnewin()" class="btn btn-dark btn-sm">Add</button>
+                    </div>
+                </div>
+                <div class="form-group" id="prd">
+                    <label for="nameField">Projects</label>
+                    <textarea rows="5" id="projectField" placeholder="enter here" class="form-control prfield" ></textarea>
+                    <div class="container text-center mt-2" id="pr">
+                        <button onclick="addnewpr()" class="btn btn-dark btn-sm">Add</button>
+                    </div>
+                </div>
+                <div class="form-group" id="exd">
+                    <label for="nameField">Extra-Curricular Activities and Achievements</label>
+                    <textarea id="exField" placeholder="enter here" class="form-control exfield" ></textarea>
+                    <div class="container text-center mt-2"id="ex">
+                        <button onclick="addnewex()" class="btn btn-dark btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container text-center mt-2">
+            <button class="btn btn-primary btn-lg" onclick="generatecv()">Generate CV</button>
+        </div>
+
+    </div>
+    <hr>
+    <!--cv Design section-->
+    <div class="Container" id="cv-template">
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="Container" id="left-group">
+                    
+                    <img src="ben-sweet-2LowviVHZ-E-unsplash.jpg" alt="profile pic" id="im">
+                    <h3 class="text-center my-4 details" id="smname">Md Amaan Ahmed</h3>
+                    <p class="text-center my-4 details" id="smphone">+915694235609,+916436758971</p>
+                    <p class="text-center my-4 details" id="smaddress">Civil lines Sector 52 Noida,India</p>
+                    <hr>
+                    <p class="text-center my-4 details" id="smll">www.linkedin.com</p>
+                    <p class="text-center my-4 details"id="smgithub">www.github.com</p>
+                    
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h1 class="text-center" style="font-weight: 980;" id="H">Md Amaan Ahmed</h1>
+                <div class="card mt-4">
+                    <div class="card-header head3">
+                      <h3>Academic Qualifications</h3>  
+                    </div>
+                    <ul id="aqt">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, earum!</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, earum!</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, earum!</li>
+                    </ul>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header head3">
+                      <h3>Technical Skills</h3>  
+                    </div>
+                    <ul id="tst">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, earum!</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, earum!</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, earum!</li>
+                    </ul>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header head3">
+                      <h3>Internships</h3>  
+                    </div>
+                    <ul id="int">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, earum!</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, earum!</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, earum!</li>
+                    </ul>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header head3">
+                      <h3>Projects</h3>  
+                    </div>
+                    <ul id="prt">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, earum!</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, earum!</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, earum!</li>
+                    </ul>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header head3">
+                      <h3>Extra-Curricular Activities and Achievements</h3>  
+                    </div>
+                    <ul id="ext">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, earum!</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, earum!</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, earum!</li>
+                    </ul>
+                </div>
+                <div class="container mt-3 text-center">
+                    <button onclick="printcv()" class="btn background head3" style="color: white;">
+                        Print CV
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="r.js"></script>
+</body>
+
+</html>
